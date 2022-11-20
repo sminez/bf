@@ -19,7 +19,7 @@ usage:
 
 == Disclaimer ==
 This is a helper script that aims to acts as a capture and review system to
-help me keep on top of things, regardless of what those things are.  There
+help me keep on top of things, regardless of what those things are. There
 are several directories that are required/expected to exist and in order to
 keep things simple `bf` will simply fail loudly if it finds itself unable to
 proceed.
@@ -47,7 +47,7 @@ DEFAULT_COMMIT_MESSAGE = "automated blobfish sync commit"
 HELP_TEXT = __doc__.split("\n--------------------")[0]
 DELIMITER = "|"
 
-ROOT_DIR = os.get_env("NOTE_ROOT", os.path.expanduser("~/.notes"))
+ROOT_DIR = os.getenv("NOTE_ROOT", os.path.expanduser("~/.notes"))
 HELPFILE_DIR = f"{ROOT_DIR}/helpfiles"
 CAPTURE_DIR = f"{ROOT_DIR}/capture"
 NOTE_DIR = f"{ROOT_DIR}/notes"

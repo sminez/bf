@@ -31,7 +31,7 @@ are several directories that are required/expected to exist and in order to
 keep things simple `bf` will simply fail loudly if it finds itself unable to
 proceed.
 
->> In short, this is me-ware: not really us-ware and DEFINITELY not them-ware!
+> In short, this is me-ware: not really us-ware and DEFINITELY not them-ware!
 
 
 ### Helpfiles
