@@ -1,0 +1,31 @@
+#compdef bf
+
+_bf() {
+  local configured_dir=${NOTE_ROOT%/notes}
+  local note_dir="${configured_dir:-$HOME/.notes/notes}"
+  local subcommands=(
+    'capture:quickly capture an idea for later reviewing'
+    'note:open or create a new note file for editing'
+    'grep:search note content using rg'
+    'find:search note titles using fd'
+    'todo:open the TODO file in vim'
+    'sync:force sync with the remote git repo'
+    'help:display help'
+  )
+
+  _arguments \
+    '1: :->first_arg' \
+    '*:: :->args'
+
+  case $state in
+    first_arg)
+      _describe -t commands "commands" subcommands;;
+
+    args)
+      case $words[1] in
+        note) _path_files -W "${note_dir}";;
+      esac
+  esac
+}
+
+_bf "$@"
